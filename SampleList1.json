@@ -1,0 +1,15 @@
+{
+    "host": "cafe.daum.net",
+    "grpid": "1XXgB",
+    "width": 160,
+    "height": 86,
+    "style": "A",
+    "fontfamily": "gungsuh",
+    "titlecolor": "##ffbb00",
+    "numbercolor": "#9fc93c",
+    "backgroundcolor": "#003399",
+    "backgroundalpha": 70,
+    "bordertype": 3,
+    "bordercolor": "#ffbb00",
+    "cornerradius": 6
+}
