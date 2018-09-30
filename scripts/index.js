@@ -4,9 +4,20 @@
 
     var _styleType;
 
-    const URL_STYLE_DATA = "SampleCircle.json";
-    // const URL_STYLE_DATA = "SampleRoundedRect.json";
-    const URL_COUNTER_STAT_INFO = "CounterInfo.xml";
+    // circle sample :
+    // const URL_STYLE_DATA = "https://gist.githubusercontent.com/justinaus/e5d38dbb3c63c791770e4d3efa8b6251/raw/SampleCircle.json";
+    
+    // rounded rect sample :
+    const URL_STYLE_DATA = "https://gist.githubusercontent.com/justinaus/e458d314806b63430720b96855d4c841/raw/SampleRoundedRect.json";
+    
+    // list sample0 :  
+    // const URL_STYLE_DATA = "https://gist.githubusercontent.com/justinaus/90d88154e726914cfb5e283c5f6662be/raw/SampleList0.json";
+    
+    // list sample1 :
+    // const URL_STYLE_DATA = "https://gist.githubusercontent.com/justinaus/1d91d27444738378d018e090e8efe9d2/raw/SampleList1.json";
+    
+    // http://cafe.daum.net/_c21_/title_counter_info?grpid=1XXgB
+    const URL_COUNTER_STAT_INFO = "https://gist.githubusercontent.com/justinaus/dd23dc0e11615c0d6b2983b2edfa32c2/raw/CounterInfo.xml";
     
     $(document).ready(function(){
       loadJson( URL_STYLE_DATA );
@@ -52,9 +63,9 @@
           }
           
           var statsModel = {
-            visitor : doc.getElementsByTagName( "visitor" )[0].textContent,
-            article : doc.getElementsByTagName( "article" )[0].textContent,
-            joiner : doc.getElementsByTagName( "joiner" )[0].textContent,
+            visitor : $(doc).find( 'visitor' ).text(),
+            article : $(doc).find( 'article' ).text(),
+            joiner : $(doc).find( 'joiner' ).text(),
           }
 
           statsModel = Object.assign( defaultValue, statsModel );
